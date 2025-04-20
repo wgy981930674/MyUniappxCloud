@@ -1,0 +1,44 @@
+<template>
+  <!-- #ifdef APP -->
+  <scroll-view style="flex: 1;" enable-back-to-top="true">
+  <!-- #endif -->
+	<!-- <page-head title="component"></page-head> -->
+    <view class="uni-container">
+		<button @click="goPage('../API/theme-change/theme-change')">theme-change</button>
+		<button @click="goPage('../component/video/video')">video</button>
+	</view>
+  <!-- #ifdef APP -->
+  </scroll-view>
+  <!-- #endif -->	 
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+			}
+		},
+		methods: {
+		  goPage(url : string) {
+				console.log("==component goPage url:"+url)
+			  uni.navigateTo({
+			      url: url, // 要跳转的页面路径
+			      success: function () {
+			          console.log('跳转成功');
+			      },
+			      fail: function (err) {
+			          console.log('跳转失败', err);
+			      },
+			      complete: function () {
+			          console.log('跳转操作完成');
+			      }
+			  });
+
+		  }
+		}
+	}
+</script>
+
+<style>
+
+</style>
