@@ -1,0 +1,1092 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/component",
+			"style": {
+				"navigationBarTitleText": "内置组件",
+				"backgroundColorContent": "#f8f8f8"
+			}
+		},
+		{
+			"path": "pages/tabBar/API",
+			"style": {
+				"navigationBarTitleText": "接口",
+				"backgroundColorContent": "#f8f8f8"
+			}
+		},	
+		{
+			"path": "pages/tabBar/CSS",
+			"style": {
+				"navigationBarTitleText": "CSS",
+				"backgroundColorContent": "#f8f8f8"
+			}
+		},
+		{
+			"path": "pages/tabBar/template",
+			"style": {
+				"navigationBarTitleText": "模板",
+				"backgroundColorContent": "#f8f8f8"
+			}
+		},
+		// #ifdef APP-ANDROID || APP-IOS || WEB || MP-WEIXIN
+		{
+			"path": "pages/API/theme-change/theme-change",
+			"group": "1,4,7",
+			"style": {
+				"navigationBarTitleText": "themeChange | 主题切换",
+				"enablePullDownRefresh": false
+			}
+		},
+		// #endif		
+		// #ifdef APP-ANDROID || APP-IOS || WEB || MP-WEIXIN
+		{
+			"path": "pages/component/video/video",
+			"group": "0,5,1",
+			"style": {
+				"navigationBarTitleText": "video | 视频"
+			}
+		}
+		// #endif					
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app x",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	// #ifndef APP-HARMONY
+	"tabBar": {
+		"color": "@tabBarColor",
+		"selectedColor": "@tabBarSelectedColor",
+		"borderStyle": "@tabBarBorderStyle",
+		"backgroundColor": "@tabBarBackgroundColor",
+		"list": [
+			{
+				"pagePath": "pages/tabBar/component",
+				"iconPath": "@tabBarComponentIconPath",
+				"selectedIconPath": "@tabBarComponentSelectedIconPath",
+				"text": "组件"
+			},
+			{
+				"pagePath": "pages/tabBar/API",
+				"iconPath": "@tabBarAPIIconPath",
+				"selectedIconPath": "@tabBarAPISelectedIconPath",
+				"text": "接口"
+			},
+			{
+				"pagePath": "pages/tabBar/CSS",
+				"iconPath": "@tabBarCSSIconPath",
+				"selectedIconPath": "@tabBarCSSSelectedIconPath",
+				"text": "CSS"
+			},
+			{
+				"pagePath": "pages/tabBar/template",
+				"iconPath": "@tabBarTemplateIconPath",
+				"selectedIconPath": "@tabBarTemplateSelectedIconPath",
+				"text": "模板"
+			}
+		]
+	},
+	// #endif	
+	"groups": [
+		{
+			"id": "component",
+			"name": "组件",
+			"children": [
+				{
+					"id": "component.global-properties-events",
+					"name": "全局属性和事件"
+				},
+				{
+					"id": "component.view-container",
+					"name": "视图容器",
+					"children": [
+						{
+							"id": "component.view-container.view",
+							"name": "view"
+						},
+						{
+							"id": "component.view-container.scroll-view",
+							"name": "scroll-view"
+						},
+						{
+							"id": "component.view-container.swiper",
+							"name": "swiper"
+						},
+						null,
+						{
+							"id": "component.view-container.movable",
+							"name": "movable",
+							"children": [
+								null,
+								{
+									"id": "component.view-container.movable.movable-view",
+									"name": "movable-view"
+								}
+							]
+						},
+						{
+							"id": "component.view-container.cover",
+							"name": "cover",
+							"children": [
+								{
+									"id": "component.view-container.cover.cover-view",
+									"name": "cover-view"
+								}
+							]
+						},
+						{
+							"id": "component.view-container.list-view",
+							"name": "list-view"
+						},
+						{
+							"id": "component.view-container.waterflow",
+							"name": "waterflow"
+						},
+						{
+							"id": "component.view-container.sticky",
+							"name": "sticky",
+							"children": [
+								{
+									"id": "component.view-container.sticky.sticky-header",
+									"name": "sticky-header"
+								},
+								{
+									"id": "component.view-container.sticky.sticky-section",
+									"name": "sticky-section"
+								}
+							]
+						},
+						{
+							"id": "component.view-container.nested-scroll",
+							"name": "nested-scroll",
+							"children": [
+								{
+									"id": "component.view-container.nested-scroll.nested-scroll-header",
+									"name": "nested-scroll-header"
+								},
+								{
+									"id": "component.view-container.nested-scroll.nested-scroll-body",
+									"name": "nested-scroll-body"
+								}
+							]
+						},
+						{
+							"id": "component.view-container.share-element",
+							"name": "share-element"
+						}
+					]
+				},
+				{
+					"id": "component.basic-content",
+					"name": "基础内容",
+					"children": [
+						null,
+						{
+							"id": "component.basic-content.text",
+							"name": "text"
+						},
+						{
+							"id": "component.basic-content.rich-text",
+							"name": "rich-text"
+						},
+						{
+							"id": "component.basic-content.progress",
+							"name": "progress"
+						},
+						{
+							"id": "component.basic-content.native-view",
+							"name": "native-view"
+						}
+					]
+				},
+				{
+					"id": "component.form-component",
+					"name": "表单组件",
+					"children": [
+						{
+							"id": "component.form-component.button",
+							"name": "button"
+						},
+						{
+							"id": "component.form-component.checkbox",
+							"name": "checkbox"
+						},
+						{
+							"id": "component.form-component.form",
+							"name": "form"
+						},
+						{
+							"id": "component.form-component.input",
+							"name": "input"
+						},
+						{
+							"id": "component.form-component.editor",
+							"name": "editor"
+						},
+						{
+							"id": "component.form-component.label",
+							"name": "label"
+						},
+						{
+							"id": "component.form-component.picker",
+							"name": "picker"
+						},
+						{
+							"id": "component.form-component.picker-view",
+							"name": "picker-view"
+						},
+						{
+							"id": "component.form-component.radio",
+							"name": "radio"
+						},
+						{
+							"id": "component.form-component.slider",
+							"name": "slider"
+						},
+						{
+							"id": "component.form-component.switch",
+							"name": "switch"
+						},
+						{
+							"id": "component.form-component.textarea",
+							"name": "textarea"
+						}
+					]
+				},
+				{
+					"id": "component.navigation",
+					"name": "导航",
+					"children": [
+						{
+							"id": "component.navigation.navigator",
+							"name": "navigator"
+						}
+					]
+				},
+				{
+					"id": "component.media",
+					"name": "媒体组件",
+					"children": [
+						{
+							"id": "component.media.image",
+							"name": "image"
+						},
+						{
+							"id": "component.media.video",
+							"name": "video"
+						}
+					]
+				},
+				{
+					"id": "component.map",
+					"name": "地图"
+				},
+				{
+					"id": "component.canvas",
+					"name": "画布"
+				},
+				{
+					"id": "component.ad",
+					"name": "广告"
+				},
+				{
+					"id": "component.web-view",
+					"name": "网页"
+				},
+				{
+					"id": "component.page-meta",
+					"name": "page-meta"
+				},
+				{
+					"id": "component.unicloud",
+					"name": "unicloud"
+				}
+			]
+		},
+		{
+			"id": "API",
+			"name": "API",
+			"children": [
+				{
+					"id": "api.global",
+					"name": "全局",
+					"children": [
+						{
+							"id": "api.global.getApp",
+							"name": "getApp"
+						},
+						{
+							"id": "api.global.getCurrentPages",
+							"name": "getCurrentPages"
+						},
+						{
+							"id": "api.global.animationFrame",
+							"name": "animationFrame"
+						}
+					]
+				},
+				{
+					"id": "api.base",
+					"name": "基础",
+					"children": [
+						{
+							"id": "api.base.env",
+							"name": "env"
+						},
+						{
+							"id": "api.base.eventBus",
+							"name": "eventBus"
+						},
+						{
+							"id": "api.base.base64",
+							"name": "Base64"
+						},
+						{
+							"id": "api.base.interceptor",
+							"name": "interceptor"
+						},
+						{
+							"id": "api.base.launch",
+							"name": "启动",
+							"children": [
+								{
+									"id": "api.base.launch.getLaunchOptionsSync",
+									"name": "getLaunchOptionsSync"
+								},
+								{
+									"id": "api.base.launch.getEnterOptionsSync",
+									"name": "getEnterOptionsSync"
+								}
+							]
+						},
+						{
+							"id": "api.base.exit",
+							"name": "exit"
+						},
+						{
+							"id": "api.base.provider",
+							"name": "provider"
+						},
+						null,
+						{
+							"id": "api.base.privacy",
+							"name": "privacy"
+						}
+					]
+				},
+				{
+					"id": "api.page",
+					"name": "页面和路由",
+					"children": [
+						{
+							"id": "api.page.navigator",
+							"name": "navigator"
+						},
+						{
+							"id": "api.page.dialogPage",
+							"name": "dialogPage"
+						},
+						{
+							"id": "api.page.setNavigationBarColor",
+							"name": "setNavigationBarColor"
+						},
+						{
+							"id": "api.page.setNavigationBarTitle",
+							"name": "setNavigationBarTitle"
+						},
+						null,
+						{
+							"id": "api.page.pullDownRefresh",
+							"name": "pullDownRefresh"
+						},
+						{
+							"id": "api.page.pageScrollTo",
+							"name": "pageScrollTo"
+						}
+					]
+				},
+				{
+					"id": "api.dom",
+					"name": "element 和 node",
+					"children": [
+						{
+							"id": "api.dom.getElementById",
+							"name": "getElementById"
+						},
+						null,
+						{
+							"id": "api.dom.createSelectorQuery",
+							"name": "createSelectorQuery"
+						}
+					]
+				},
+				{
+					"id": "api.ui",
+					"name": "界面",
+					"children": [
+						null,
+						{
+							"id": "api.ui.showActionSheet",
+							"name": "showActionSheet"
+						},
+						{
+							"id": "api.ui.showModal",
+							"name": "showModal"
+						},
+						{
+							"id": "api.ui.showLoading",
+							"name": "showLoading"
+						},
+						{
+							"id": "api.ui.showToast",
+							"name": "showToast"
+						},
+						{
+							"id": "api.ui.loadFontFace",
+							"name": "loadFontFace"
+						},
+						{
+							"id": "api.ui.rpx2px",
+							"name": "rpx2px"
+						},
+						{
+							"id": "api.ui.themeChange",
+							"name": "themeChange"
+						},
+            {
+            	"id": "api.ui.intersectionObserver",
+            	"name": "intersectionObserver"
+            }
+					]
+				},
+				{
+					"id": "api.network",
+					"name": "网络",
+					"children": [
+						{
+							"id": "api.network.request",
+							"name": "request"
+						},
+						{
+							"id": "api.network.uploadFile",
+							"name": "uploadFile"
+						},
+						{
+							"id": "api.network.downloadFile",
+							"name": "downloadFile"
+						},
+						{
+							"id": "api.network.getNetworkType",
+							"name": "getNetworkType"
+						},
+						{
+							"id": "api.network.websocket",
+							"name": "websocket"
+						},
+						{
+							"id": "api.network.connectEventSource",
+							"name": "connectEventSource"
+						}
+					]
+				},
+				{
+					"id": "api.device",
+					"name": "设备",
+					"children": [
+						{
+							"id": "api.device.getSystemInfo",
+							"name": "getSystemInfo"
+						},
+						{
+							"id": "api.device.getDeviceInfo",
+							"name": "getDeviceInfo"
+						},
+						{
+							"id": "api.device.getWindowInfo",
+							"name": "getWindowInfo"
+						},
+						{
+							"id": "api.device.getAppBaseInfo",
+							"name": "getAppBaseInfo"
+						},
+						{
+							"id": "api.device.getAppAuthorizeSetting",
+							"name": "getAppAuthorizeSetting"
+						},
+						{
+							"id": "api.device.openAppAuthorizeSetting",
+							"name": "openAppAuthorizeSetting"
+						},
+						{
+							"id": "api.device.getSystemSetting",
+							"name": "getSystemSetting"
+						},
+						{
+							"id": "api.device.installApk",
+							"name": "installApk"
+						},
+						{
+							"id": "api.device.getBatteryInfo",
+							"name": "getBatteryInfo"
+						},
+						{
+							"id": "api.device.makePhoneCall",
+							"name": "makePhoneCall"
+						},
+						{
+							"id": "api.device.clipboard",
+							"name": "clipboard"
+						},
+						{
+							"id": "api.device.compass",
+							"name": "compass"
+						},
+            {
+            	"id": "api.device.scanCode",
+            	"name": "scanCode"
+            },
+						null,
+						null,
+						null,
+						{
+							"id": "api.device.createRequestPermissionListener",
+							"name": "createRequestPermissionListener"
+						},
+						null,
+						{
+							"id": "api.device.isSimulator",
+							"name": "isSimulator"
+						},
+						{
+							"id": "api.device.getAccessibilityInfo",
+							"name": "getAccessibilityInfo"
+						}
+					]
+				},
+				{
+					"id": "api.media",
+					"name": "媒体",
+					"children": [
+						{
+							"id": "api.media.chooseImage",
+							"name": "chooseImage"
+						},
+						{
+							"id": "api.media.previewImage",
+							"name": "previewImage"
+						},
+						{
+							"id": "api.media.saveImageToPhotosAlbum",
+							"name": "saveImageToPhotosAlbum"
+						},
+						{
+							"id": "api.media.getImageInfo",
+							"name": "getImageInfo"
+						},
+						{
+							"id": "api.media.compressImage",
+							"name": "compressImage"
+						},
+						{
+							"id": "api.media.chooseVideo",
+							"name": "chooseVideo"
+						},
+						{
+							"id": "api.media.saveVideoToPhotosAlbum",
+							"name": "saveVideoToPhotosAlbum"
+						},
+						{
+							"id": "api.media.getVideoInfo",
+							"name": "getVideoInfo"
+						},
+						{
+							"id": "api.media.compressVideo",
+							"name": "compressVideo"
+						},
+						{
+							"id": "api.media.chooseMedia",
+							"name": "chooseMedia"
+						},
+						{
+							"id": "api.media.chooseFile",
+							"name": "chooseFile"
+						},
+						{
+							"id": "api.media.createInnerAudioContext",
+							"name": "createInnerAudioContext"
+						},
+						{
+							"id": "api.media.getBackgroundAudioManager",
+							"name": "getBackgroundAudioManager"
+						}
+					]
+				},
+				null,
+				{
+					"id": "api.location",
+					"name": "位置",
+					"children": [
+						{
+							"id": "api.location.getLocation",
+							"name": "getLocation"
+						},
+						{
+							"id": "api.location.openLocation",
+							"name": "openLocation"
+						},
+						{
+							"id": "api.location.chooseLocation",
+							"name": "chooseLocation"
+						}
+					]
+				},
+				{
+					"id": "api.storage",
+					"name": "数据存储"
+				},
+				{
+					"id": "api.file",
+					"name": "文件",
+					"children": [
+						{
+							"id": "api.file.getFileSystemManager",
+							"name": "getFileSystemManager"
+						}
+					]
+				},
+				{
+					"id": "api.loginVerify",
+					"name": "登录与认证",
+					"children": [
+						{
+							"id": "api.loginVerify.getUniverifyManager",
+							"name": "getUniverifyManager"
+						},
+						{
+							"id": "api.loginVerify.facialRecognitionMetaInfo",
+							"name": "facialRecognitionMetaInfo"
+						}
+					]
+				},
+				{
+					"id": "api.ad",
+					"name": "广告",
+					"children": [
+						{
+							"id": "api.ad.createRewardedVideoAd",
+							"name": "createRewardedVideoAd"
+						},
+						{
+							"id": "api.ad.createInterstitialAd",
+							"name": "createInterstitialAd"
+						}
+					]
+				},
+				{
+					"id": "api.payment",
+					"name": "支付",
+					"children": [
+						{
+							"id": "api.payment.requestPayment",
+							"name": "requestPayment"
+						},
+						{
+							"id": "api.payment.virtualPayment",
+							"name": "virtualPayment"
+						}
+					]
+				},
+				{
+					"id": "api.share",
+					"name": "分享",
+					"children": [
+						{
+							"id": "api.share.shareWithSystem",
+							"name": "shareWithSystem"
+						}
+					]
+				},
+				{
+					"id": "api.push",
+					"name": "推送",
+					"children": [
+						{
+							"id": "api.push.uni-push",
+							"name": "push"
+						}
+					]
+				},
+				{
+					"id": "api.stat",
+					"name": "统计",
+					"children": [
+						{
+							"id": "api.stat.report",
+							"name": "report"
+						}
+					]
+				},
+				null,
+				{
+					"id": "api.unicloud",
+					"name": "uniCloud客户端API",
+					"children": [
+						{
+							"id": "api.unicloud.cloudFunction",
+							"name": "cloudFunction"
+						},
+						{
+							"id": "api.unicloud.cloudObject",
+							"name": "cloudObject"
+						},
+						{
+							"id": "api.unicloud.cloudStorage",
+							"name": "cloudStorage"
+						},
+						{
+							"id": "api.unicloud.database",
+							"name": "database"
+						}
+					]
+				},
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				{
+					"id": "api.elementInstance",
+					"name": "UniElement 实例"
+				}
+			]
+		},
+		{
+			"id": "CSS",
+			"name": "组件",
+			"children": [
+				{
+					"id": "css.properties.width",
+					"name": "width",
+					"children": [
+						{
+							"id": "css.properties.width.width",
+							"name": "width"
+						},
+						{
+							"id": "css.properties.width.min-width",
+							"name": "min-width"
+						},
+						{
+							"id": "css.properties.width.max-width",
+							"name": "max-width"
+						}
+					]
+				},
+				{
+					"id": "css.properties.height",
+					"name": "height",
+					"children": [
+						{
+							"id": "css.properties.height.height",
+							"name": "height"
+						},
+						{
+							"id": "css.properties.height.min-height",
+							"name": "min-height"
+						},
+						{
+							"id": "css.properties.height.max-height",
+							"name": "max-height"
+						}
+					]
+				},
+				{
+					"id": "css.properties.margin",
+					"name": "margin",
+					"children": [
+						{
+							"id": "css.properties.margin.margin",
+							"name": "margin"
+						},
+						{
+							"id": "css.properties.margin.margin-top",
+							"name": "margin-top"
+						},
+						{
+							"id": "css.properties.margin.margin-bottom",
+							"name": "margin-bottom"
+						},
+						{
+							"id": "css.properties.margin.margin-left",
+							"name": "margin-left"
+						},
+						{
+							"id": "css.properties.margin.margin-right",
+							"name": "margin-right"
+						}
+					]
+				},
+				{
+					"id": "css.properties.padding",
+					"name": "padding",
+					"children": [
+						{
+							"id": "css.properties.padding.padding",
+							"name": "padding"
+						},
+						{
+							"id": "css.properties.padding.padding-top",
+							"name": "padding-top"
+						},
+						{
+							"id": "css.properties.padding.padding-bottom",
+							"name": "padding-bottom"
+						},
+						{
+							"id": "css.properties.padding.padding-left",
+							"name": "padding-left"
+						},
+						{
+							"id": "css.properties.padding.padding-right",
+							"name": "padding-right"
+						}
+					]
+				},
+				null,
+				{
+					"id": "display",
+					"name": "display"
+				},
+				{
+					"id": "css.properties.visibility",
+					"name": "visibility"
+				},
+				{
+					"id": "css.properties.flex",
+					"name": "flex",
+					"children": [
+						{
+							"id": "css.properties.flex.flex",
+							"name": "flex"
+						},
+						{
+							"id": "css.properties.flex.flex-direction",
+							"name": "flex-direction"
+						},
+						{
+							"id": "css.properties.flex.justify-content",
+							"name": "justify-content"
+						},
+						null,
+						{
+							"id": "css.properties.flex.align-items",
+							"name": "align-items"
+						},
+						null,
+						{
+							"id": "css.properties.flex.align-content",
+							"name": "align-content"
+						},
+						{
+							"id": "css.properties.flex.flex-grow",
+							"name": "flex-grow"
+						},
+						{
+							"id": "css.properties.flex.flex-shrink",
+							"name": "flex-shrink"
+						},
+						{
+							"id": "css.properties.flex.flex-basis",
+							"name": "flex-basis"
+						},
+						{
+							"id": "css.properties.flex.flex-flow",
+							"name": "flex-flow"
+						}
+					]
+				},
+				{
+					"id": "css.properties.background",
+					"name": "background",
+					"children": [
+						null,
+						{
+							"id": "css.properties.background.background-color",
+							"name": "background-color"
+						},
+						{
+							"id": "css.properties.background.background-image",
+							"name": "background-image"
+						}
+					]
+				},
+				{
+					"id": "css.properties.position",
+					"name": "position",
+					"children": [
+						{
+							"id": "css.properties.position.position",
+							"name": "position"
+						}
+					]
+				},
+				{
+					"id": "css.properties.z-index",
+					"name": "z-index"
+				},
+				{
+					"id": "overflow",
+					"name": "overflow"
+				},
+				null,
+				{
+					"id": "css.properties.border",
+					"name": "border",
+					"children": [
+						{
+							"id": "css.properties.border.border",
+							"name": "border"
+						},
+						{
+							"id": "css.properties.border.border-style",
+							"name": "border-style"
+						},
+						null,
+						null,
+						null,
+						null,
+						{
+							"id": "css.properties.border.border-width",
+							"name": "border-width"
+						},
+						null,
+						null,
+						null,
+						null,
+						{
+							"id": "css.properties.border.border-color",
+							"name": "border-color"
+						},
+						null,
+						null,
+						null,
+						null,
+						{
+							"id": "css.properties.border.border-radius",
+							"name": "border-radius"
+						},
+						null,
+						null,
+						null,
+						null,
+						{
+							"id": "css.properties.border.border-top",
+							"name": "border-top"
+						},
+						{
+							"id": "css.properties.border.border-bottom",
+							"name": "border-bottom"
+						},
+						{
+							"id": "css.properties.border.border-left",
+							"name": "border-left"
+						},
+						{
+							"id": "css.properties.border.border-right",
+							"name": "border-right"
+						}
+					]
+				},
+				{
+					"id": "css.properties.text",
+					"name": "text",
+					"children": [
+						{
+							"id": "css.properties.text.color",
+							"name": "color"
+						},
+						{
+							"id": "css.properties.text.font-size",
+							"name": "font-size"
+						},
+						{
+							"id": "css.properties.text.font-family",
+							"name": "font-family"
+						},
+						{
+							"id": "css.properties.text.font-style",
+							"name": "font-style"
+						},
+						{
+							"id": "css.properties.text.font-weight",
+							"name": "font-weight"
+						},
+						null,
+						{
+							"id": "css.properties.text.text-decoration-line",
+							"name": "text-decoration-line"
+						},
+						null,
+						null,
+						null,
+						{
+							"id": "css.properties.text.text-align",
+							"name": "text-align"
+						},
+						{
+							"id": "css.properties.text.text-overflow",
+							"name": "text-overflow"
+						},
+						{
+							"id": "css.properties.text.line-height",
+							"name": "line-height"
+						},
+						null,
+						{
+							"id": "css.properties.text.letter-spacing",
+							"name": "letter-spacing"
+						}
+					]
+				},
+				{
+					"id": "css.properties.box-shadow",
+					"name": "box-shadow"
+				},
+				{
+					"id": "css.properties.transition",
+					"name": "transition"
+				},
+				{
+					"id": "css.properties.transform",
+					"name": "transform"
+				},
+				{
+					"id": "css.properties.pointer-events",
+					"name": "pointer-events"
+				},
+				null,
+				{
+					"id": "function",
+					"name": "函数",
+          "children" : [
+            {
+              "id": "variable",
+              "name": "variable"
+            },
+            {
+            	"id": "function",
+            	"name": "function"
+            }
+          ]
+				}
+			]
+		}
+	]	
+}
